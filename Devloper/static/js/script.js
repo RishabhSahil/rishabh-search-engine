@@ -147,3 +147,18 @@ document.getElementById('frmsearch').onsubmit = function() {
     }
 
 }
+
+function ics(){
+    query = document.getElementById('textSearch').value;
+    if(query==false){
+        
+        console.log("please enter your query");
+        window.location = 'https://rishabhsahil.github.io/ics/'
+        return false;
+    }
+    else{
+        window.location = 'https://www.google.com/search?q=' + query
+        return false;
+
+    }
+} 
