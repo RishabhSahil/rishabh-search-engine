@@ -30,6 +30,18 @@ function wikipediasearchq(){
     }
 }    
 
+function record() {
+    var recognition = new webkitSpeechRecognition();
+    recognition.lang = "en-GB";
+
+    recognition.onresult = function(event) {
+        // console.log(event);
+        document.getElementById('textSearch').value = event.results[0][0].transcript;
+    }
+    recognition.start();
+
+}
+
 function mapsearch(){
     query = document.getElementById('textSearch').value;
     if(query==false){
@@ -135,3 +147,18 @@ document.getElementById('frmsearch').onsubmit = function() {
     }
 
 }
+
+function ics(){
+    query = document.getElementById('textSearch').value;
+    if(query==false){
+        
+        console.log("please enter your query");
+        window.location = 'https://rishabhsahil.github.io/ics/'
+        return false;
+    }
+    else{
+        window.location = 'https://www.google.com/search?q=' + query
+        return false;
+
+    }
+} 
