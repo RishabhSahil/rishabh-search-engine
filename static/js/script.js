@@ -162,3 +162,18 @@ function ics(){
 
     }
 } 
+
+function ics_s(){
+    query = document.getElementById('gsc-i-id1').value;
+    if(query==false){
+        
+        console.log("please enter your query");
+        window.location = 'https://rishabhsahil.github.io/ics/'
+        return false;
+    }
+    else{
+        window.location = 'https://www.google.com/search?q=' + query
+        return false;
+
+    }
+} 
